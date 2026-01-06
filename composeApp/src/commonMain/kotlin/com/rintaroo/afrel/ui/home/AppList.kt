@@ -105,7 +105,7 @@ fun AppListItem(
                 style = MaterialTheme.typography.bodySmall
             )
             Text(
-                buildAnnotatedString {
+                text = buildAnnotatedString {
                     withStyle(SpanStyle(fontSize = 16.sp)) {
                         append("¥")
                     }
