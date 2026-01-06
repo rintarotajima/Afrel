@@ -15,8 +15,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.rintaroo.afrel.data.database.entity.App
@@ -103,9 +105,13 @@ fun AppListItem(
                 style = MaterialTheme.typography.bodySmall
             )
             Text(
-                text = "¥${app.amount.toInt()}",
-                color = Color.Gray,
-                fontSize = 16.sp,
+                buildAnnotatedString {
+                    withStyle(SpanStyle(fontSize = 16.sp)) {
+                        append("¥")
+                    }
+                    append("${app.amount.toInt()}")
+                },
+                fontSize = 20.sp,
                 style = MaterialTheme.typography.bodySmall
             )
         }
