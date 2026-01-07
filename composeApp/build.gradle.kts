@@ -64,7 +64,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.rintaroo.afrel"
+    namespace = "com.rintaroo.mokumokusolo"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
