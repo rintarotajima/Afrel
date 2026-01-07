@@ -1,5 +1,7 @@
 package com.rintaroo.afrel.ui.settings
 
+import afrel.composeapp.generated.resources.Res
+import afrel.composeapp.generated.resources.app_info
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -22,6 +24,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.rintaroo.afrel.util.UrlOpener
+import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -35,7 +38,7 @@ fun SettingsScreen(
         modifier = modifier.fillMaxSize(),
         topBar = {
             TopAppBar(
-                title = { Text("設定") },
+                title = { Text(stringResource(Res.string.app_info)) },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
                         Icon(
