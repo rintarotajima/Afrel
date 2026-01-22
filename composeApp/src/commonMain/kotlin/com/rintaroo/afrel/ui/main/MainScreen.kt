@@ -216,7 +216,7 @@ fun MainScreen(
                     try {
                         if (isIncome) {
                             val newApp = App(
-                                id = 0,
+                                id = null,
                                 name = name,
                                 amount = amount.toLong(),
                                 date = DateUtils.getCurrentDateMillis()
@@ -224,7 +224,7 @@ fun MainScreen(
                             viewModel.addApp(newApp)
                         } else {
                             val newExpenditure = Expenditure(
-                                id = 0,
+                                id = null,
                                 name = name,
                                 amount = amount.toLong(),
                                 date = DateUtils.getCurrentDateMillis()
