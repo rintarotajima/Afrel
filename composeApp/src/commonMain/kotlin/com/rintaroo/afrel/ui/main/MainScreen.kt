@@ -138,10 +138,15 @@ fun MainScreen(
 //            }
 //        },
         floatingActionButton = {
-            FloatingActionButton(
-                onClick = { showAddItemScreen = true }
-            ) {
-                Icon(Icons.Default.Add, "")
+            val shouldShowFab = currentDestination?.hierarchy?.any {
+                it.hasRoute<AppDestination.Home>()
+            } == true && !showAddItemScreen
+            if (shouldShowFab) {
+                FloatingActionButton(
+                    onClick = { showAddItemScreen = true }
+                ) {
+                    Icon(Icons.Default.Add, "")
+                }
             }
         },
         snackbarHost = { SnackbarHost(snackbarHostState) }
