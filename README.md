@@ -1,4 +1,5 @@
 # Afrel(アフレル)-リリース後の継続開発アプリ
+[<img alt="Google Play で手に入れよう" height="80" src="https://play.google.com/intl/ja_jp/badges/static/images/badges/ja_badge_web_generic.png"/>](https://play.google.com/store/apps/details?id=com.rintaroo.mokumokusolo)
 
 | ホーム画面                                                   | 追加画面(収益)                                                   | 追加画面(支出)                                                   |
 |---------------------------------------------------------|------------------------------------------------------------|------------------------------------------------------------|
